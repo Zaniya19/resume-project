@@ -172,12 +172,16 @@ header h1 {
 header h2 {
     font-size: 24px;
     padding: 40px 0 20px 0;
+    white-space: nowrap;
     text-align: right;
 }
 
-header a {
-    float: right;
-    display: block;
+nav {
+    display: flex;
+    justify-content: right;
+}
+
+nav a {
     color: #ffffff;
     text-align: center;
     padding: 14px 16px;
@@ -185,19 +189,20 @@ header a {
     text-decoration: none;
 }
 
-header a.active {
+nav a.active {
     background-color: rgb(141, 140, 177);
     color: #a4a9bb;
 }
 
-header a:hover {
+nav a:hover {
     background-color: #000000;
     color: #ffffff;
 }
 
 header,
-footer,
-article {
+nav,
+article 
+footer,{
     padding: 0 12.5% 0 12.5%;
 }
 
@@ -220,6 +225,32 @@ article p {
     line-height: 20px;
 }
 
+
+.row{
+    margin: 8px -16px;
+}
+
+.row, 
+.row > .column{
+    padding: 8px;
+}
+
+.column{
+    float: left;
+    width:25%;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.content{
+    background-color: rgb(132, 140, 245);
+    padding: 10px;
+}
+
 footer {
     font-size: 12px;
     padding-top: 40px;
@@ -237,6 +268,58 @@ footer a.active {
 }
 
 footer a:hover {
-    color: #000000;
+    color: #d6d0d0;
 }
 
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color:rgb(138, 90, 90) 255, 255);
+    color: rgba(255, 255, 255, 0.473)55, 255, 255);
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #f3f3f354;
+  }
+  
+  .container {
+    background-color:#99a5dd
+    padding: 20px;
+  }
+
+@media screen and (max-width: px ) {
+    header h2 {
+        clear: left;
+        text-align: unset;
+        padding-top: 20px;
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+    .column{
+        width: 50%;
+    }
+
+    nav  {
+       justify-content: unset;
+       flex-direction: column;
+       padding: 0%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .column{
+        width: 100%;
+    }
+}

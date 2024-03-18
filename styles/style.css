@@ -298,7 +298,7 @@ input[type=text], select, textarea {
     padding: 20px;
   }
 
-@media screen and (max-width: px ) {
+@media screen and (max-width: 760px ) {
     header h2 {
         clear: left;
         text-align: unset;
